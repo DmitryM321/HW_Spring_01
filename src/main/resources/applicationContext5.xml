@@ -9,7 +9,7 @@
 
     <bean id = "customCar"
           class="org.example.intoduction.Car"
-            scope="singleton">
+            scope="prototype">
     </bean>
 
 

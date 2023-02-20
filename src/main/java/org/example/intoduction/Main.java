@@ -4,9 +4,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        // singleton
+
+
+
+        // singleton + prototype
         ClassPathXmlApplicationContext context =
-            new ClassPathXmlApplicationContext("applicationContext4.xml");
+            new ClassPathXmlApplicationContext("applicationContext5.xml");
         Car car1 = context.getBean("customCar", Car.class);
         Car car2 = context.getBean("customCar", Car.class);
 
