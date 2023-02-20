@@ -4,18 +4,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-
-
-
-
-        // Часть 3.  внедрение зависимостей. set
+        // singleton
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext3.xml");
+            new ClassPathXmlApplicationContext("applicationContext4.xml");
+        Car car1 = context.getBean("customCar", Car.class);
+        Car car2 = context.getBean("customCar", Car.class);
 
-        Person person2 = context.getBean("customPerson", Person.class);
-        person2.drive();
+        System.out.println(car1 == car2);
+        System.out.println(car1);
+        System.out.println(car2);
+
         context.close();
 
+        // Часть 3.  внедрение зависимостей. set
+//        ClassPathXmlApplicationContext context =
+//                new ClassPathXmlApplicationContext("applicationContext3.xml");
+//
+//        Person person2 = context.getBean("customPerson", Person.class);
+//        person2.drive();
+//        context.close();
 
         // Часть 2.  внедрение зависимостей
 //        ClassPathXmlApplicationContext context =
