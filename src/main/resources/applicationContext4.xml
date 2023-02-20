@@ -9,7 +9,9 @@
 
     <bean id = "customCar"
           class="org.example.intoduction.Car"
-            scope="singleton">
+            scope="singleton"
+            init-method="init"
+            destroy-method="destroy">
     </bean>
 
 

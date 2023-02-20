@@ -1,23 +1,27 @@
 package org.example.intoduction;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-
-
-
-        // singleton + prototype
+        // Часть 5. init + destroy
         ClassPathXmlApplicationContext context =
-            new ClassPathXmlApplicationContext("applicationContext5.xml");
-        Car car1 = context.getBean("customCar", Car.class);
-        Car car2 = context.getBean("customCar", Car.class);
-
-        System.out.println(car1 == car2);
-        System.out.println(car1);
-        System.out.println(car2);
-
+            new ClassPathXmlApplicationContext("applicationContext4.xml");
+        Car car = context.getBean("customCar", Car.class);
+        car.go();
         context.close();
+
+
+        // Часть 4. singleton + prototype
+//        ClassPathXmlApplicationContext context =
+//            new ClassPathXmlApplicationContext("applicationContext5.xml");
+//        Car car1 = context.getBean("customCar", Car.class);
+//        Car car2 = context.getBean("customCar", Car.class);
+//
+//        System.out.println(car1 == car2);
+//        System.out.println(car1);
+//        System.out.println(car2);
+//
+//        context.close();
 
         // Часть 3.  внедрение зависимостей. set
 //        ClassPathXmlApplicationContext context =
