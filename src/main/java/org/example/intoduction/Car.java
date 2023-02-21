@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 //@Primary
-@Component
-@Scope("singleton")
+//@Component
+//@Scope("singleton")
 public class Car implements Transport{
     @PostConstruct
     public void init(){

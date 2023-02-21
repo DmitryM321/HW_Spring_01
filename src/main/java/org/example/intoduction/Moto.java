@@ -8,16 +8,16 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 //@Primary
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class Moto implements Transport{
-    @PostConstruct
-    public void init(){
-        System.out.println("Класс Moto - Метод init");
-    }
-    @PreDestroy
-    public void destroy(){
-        System.out.println("Класс Moto - Метод destroy");
-    }
+//    @PostConstruct
+//    public void init(){
+//        System.out.println("Класс Moto - Метод init");
+//    }
+//    @PreDestroy
+//    public void destroy(){
+//        System.out.println("Класс Moto - Метод destroy");
+//    }
 
     @Override
     public void go() {
